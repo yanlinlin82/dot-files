@@ -1,0 +1,31 @@
+# ~/.bashrc
+
+eval `dircolors -b`
+
+export PS1='\[\033[00;32m\]\u@\h\[\033[00m\] [\D{%Y-%m-%d} \t] \[\033[01;34m\]\w\[\033[00m\] \$ '
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+export TIME_STYLE='+%Y-%m-%d %H:%M:%S'
+export PAGER="less -R -X"
+export MANPAGER="${PAGER}"
+
+alias vi='vi -p'
+alias today='date +%Y-%m-%d'
+alias now='date +%Y%m%d%H%M%S'
+alias less='less -XR'
+alias top='htop'
+alias git-log='git log --pretty="%ad %C(green)%aN %C(yellow)%h %C(reset)%s" --date=format:"%Y-%m-%d %H:%M"'
+
+alias btime='stat -c "%w"' # birth time of file
+alias atime='stat -c "%x"' # access time of file
+alias mtime='stat -c "%y"' # modification time of file
+alias ctime='stat -c "%z"' # status change time of file
+
+cdx() {
+	if [ -z "$1" ]; then
+		echo "Usage: cdx <cmd>"
+	else
+		cd $(dirname $(which $1))
+	fi
+}
+
+# vim: ft=sh
