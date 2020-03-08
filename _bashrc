@@ -13,7 +13,7 @@ alias today='date +%Y-%m-%d'
 alias now='date +%Y%m%d%H%M%S'
 alias less='less -XR'
 alias top='htop'
-alias git-log='git log --pretty="%ad %C(green)%aN %C(yellow)%h %C(reset)%s" --date=format:"%Y-%m-%d %H:%M"'
+alias git-log='git log --pretty="%ad %C(blue)%G? %C(green)%aN %C(yellow)%h %C(reset)%s" --date=format:"%Y-%m-%d %H:%M"'
 
 alias btime='stat -c "%w"' # birth time of file
 alias atime='stat -c "%x"' # access time of file
